@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     print("{} ".format(argc - 1) + \
         ("argument" if argc == 2 else "arguments") + \
-        ("." if argc == 1 else ":") + ("\n"), end='')
+        ("." if argc == 1 else ":"), end='')
 
 
     x = 1
