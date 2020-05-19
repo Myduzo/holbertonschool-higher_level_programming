@@ -20,12 +20,14 @@ class Square:
 
     @property
     def size(self):
-        """A method which is used for getting a value is decorated with @property"""
+        """A method which is used for getting a value
+         is decorated with @property"""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
-        """A method which is used for setting a value is decorated with @size.setter"""
+        """A method which is used for setting a value
+         is decorated with @size.setter"""
         if not(isinstance(value, int)):
             raise TypeError("size must be an integer")
         if value < 0:
