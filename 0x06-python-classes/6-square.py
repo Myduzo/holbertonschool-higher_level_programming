@@ -26,8 +26,8 @@ class Square:
         count = 0
         x = 0
         y = 0
-        if self.__size == 0 or pos[1] != 0:
-            print()
+        if self.__size == 0 or pos[1] > 0:
+            print() 
         while count < area:
             if (x == self.__size):
                 print()
@@ -40,7 +40,6 @@ class Square:
             print("#", end="")
             count += 1
             x += 1
-
         print()
 
     @property
@@ -70,9 +69,7 @@ class Square:
     def position(self, value):
         """A method which is used for setting a value
          is decorated with @position.setter"""
-        if not((isinstance(value[0])) and (isinstance(value[1]))):
-            print("position must be a tuple of 2 positive integers")
-        if value[1] > 0:
-            print(" ")
+        if not(isinstance(value)):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
         return self.__position
