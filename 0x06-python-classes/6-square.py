@@ -27,7 +27,7 @@ class Square:
         x = 0
         y = 0
         if self.__size == 0 or pos[1] > 0:
-            print() 
+            print()
         while count < area:
             if (x == self.__size):
                 print()
