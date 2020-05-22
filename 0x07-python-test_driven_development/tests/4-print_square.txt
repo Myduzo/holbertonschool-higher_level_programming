@@ -1,0 +1,27 @@
+Testing Module for print square
+===============================
+
+This is a test file that tests the print square function
+--------------------------------------------------------
+
+>>> print_square = __import__('4-print_square').print_square
+
+>>> print_square(3)
+###
+###
+###
+
+>>> print_square("s")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(-6)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> print_square(9.2)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer

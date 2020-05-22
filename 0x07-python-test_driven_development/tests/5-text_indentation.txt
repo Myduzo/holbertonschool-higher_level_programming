@@ -1,0 +1,43 @@
+Testing Module for text indentation
+===================================
+
+This is a test file that tests the text indentation function
+------------------------------------------------------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("What is your name? ")
+What is your name?
+<BLANKLINE>
+
+>>> text_indentation("That is so cool !")
+That is so cool !
+
+>>> text_indentation("Nice. ")
+Nice.
+<BLANKLINE>
+
+>>> text_indentation("There is two types: ")
+There is two types:
+<BLANKLINE>
+
+>>> text_indentation("")
+<BLANKLINE>
+
+>>> text_indentation(50)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(".??!:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+!:
+<BLANKLINE>
+
+>>> text_indentation("   Good Game    ")
+Good Game
