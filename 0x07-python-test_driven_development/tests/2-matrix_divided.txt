@@ -3,3 +3,5 @@ Testing Module for matrix devided
 
 This is a test file that tests matrix devided function
 ------------------------------------------------------
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
