@@ -26,7 +26,7 @@ class Rectangle:
 
     def perimeter(self):
         """Public instance method perimeter"""
-        if (self.__width is 0) or (self.__height is 0)
+        if (self.__width is 0) or (self.__height is 0):
             return 0
         perimeter = 2 * (self.__width + self.__height)
         return perimeter
