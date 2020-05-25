@@ -68,4 +68,3 @@ class Rectangle:
             else:
                 rec += ""
         return rec
-
