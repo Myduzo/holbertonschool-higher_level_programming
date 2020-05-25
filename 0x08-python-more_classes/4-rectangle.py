@@ -8,14 +8,6 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Instantiation with optional width"""
-        if not isinstance(width, int):
-            raise TypeError("width must be integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        if not isinstance(height, int):
-            raise TypeError("height must be integer")
-        if height < 0:
-            raise ValueError("height must be >= 0")
         self.__width = width
         self.__height = height
 
@@ -52,6 +44,7 @@ class Rectangle:
     def height(self):
         """A method which is used for getting a value
          is decorated with @property"""
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -68,6 +61,8 @@ class Rectangle:
         """method str"""
         x = 0
         rec = ""
+        if self.__width == 0 or self.__height == 0:
+            return rec
         for x in range(self.__height):
             rec += "#" * self.__width
             if x != self.__height - 1:
@@ -75,10 +70,6 @@ class Rectangle:
             else:
                 rec += ""
         return rec
-
-    def print(self):
-        """method print"""
-        return(str(self))
 
     def __repr__(self):
         """method repr"""
