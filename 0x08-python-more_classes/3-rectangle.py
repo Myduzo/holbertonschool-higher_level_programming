@@ -65,7 +65,7 @@ class Rectangle:
         return value
 
     def __str__(self):
-        """Public instance method str"""
+        """method str"""
         x = 0
         rec = ""
         for x in range(self.__height):
@@ -77,5 +77,5 @@ class Rectangle:
         return rec
 
     def print(self):
-        """Public instance method print"""
+        """method print"""
         return(str(self))
