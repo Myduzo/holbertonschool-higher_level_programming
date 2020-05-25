@@ -67,11 +67,9 @@ class Rectangle:
     def __str__(self):
         """Public instance method str"""
         x = 0
-        y = 0
         rec = ""
         for x in range(self.__height):
-            for y in range(self.__width):
-                rec += "#"
+            rec += "#" * self.__width
             if x != self.__height - 1:
                 rec += "\n"
             else:
