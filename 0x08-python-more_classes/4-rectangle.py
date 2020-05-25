@@ -63,3 +63,23 @@ class Rectangle:
             raise ValueError("height must be >=0")
         self.__height = value
         return value
+
+    def __str__(self):
+        """method str"""
+        x = 0
+        rec = ""
+        for x in range(self.__height):
+            rec += "#" * self.__width
+            if x != self.__height - 1:
+                rec += "\n"
+            else:
+                rec += ""
+        return rec
+
+    def print(self):
+        """method print"""
+        return(str(self))
+
+    def __repr__(self):
+        """method repr"""
+        return "Rectangle ({}, {})".format(self.__width, self.__height)
