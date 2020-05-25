@@ -59,6 +59,8 @@ class Rectangle:
         """method str"""
         x = 0
         rec = ""
+        if self.__width == 0 or self.__height == 0:
+            return rec
         for x in range(self.__height):
             rec += "#" * self.__width
             if x != self.__height - 1:
@@ -67,6 +69,3 @@ class Rectangle:
                 rec += ""
         return rec
 
-    def print(self):
-        """method print"""
-        return(str(self))
