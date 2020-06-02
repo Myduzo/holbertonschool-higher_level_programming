@@ -8,6 +8,6 @@ class MyInt(int):
     """MyInt class that inherits from int"""
     pass
 
-    def my_invert(self, number):
+    def __eq__(self, other):
         """function that inverts == sign to !="""
-        return (False if self is number else True)
+        return self != other
