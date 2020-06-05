@@ -22,7 +22,7 @@ class Rectangle(Base):
             self.__width = width
 
         @width.setter
-        def width(self, width):
+        def width(self):
             """Setter for the private width attribute"""
             return self.__width
 
@@ -32,7 +32,7 @@ class Rectangle(Base):
             self.__height = height
 
         @height.setter
-        def height(self, height):
+        def height(self):
             """Setter for the private height attribute"""
             return self.__height
 
@@ -42,7 +42,7 @@ class Rectangle(Base):
             self.__x = x
 
         @x.setter
-        def x(self, x):
+        def x(self):
             """Setter for the private x attribute"""
             return self.__x
 
@@ -52,6 +52,6 @@ class Rectangle(Base):
             self.__y = y
 
         @y.setter
-        def width(self, y):
+        def width(self):
             """Setter for the private y attribute"""
             return self.__y
