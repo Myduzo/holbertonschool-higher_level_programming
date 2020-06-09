@@ -62,7 +62,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """public method to_dictionary"""
-        return {"x": self.x, "y": self.y, "id": self.id, 
+        return {"x": self.x, "y": self.y, "id": self.id,
                 "height": self.height, "width": self.width}
 
     @property
