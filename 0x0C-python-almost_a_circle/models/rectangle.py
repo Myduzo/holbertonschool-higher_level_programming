@@ -33,7 +33,11 @@ class Rectangle(Base):
 
     def __str__(self):
         """__str__ method"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x,
+                                                       self.y,
+                                                       self.width,
+                                                       self.height)
 
     def update(self, *args, **kwargs):
         """Public method update"""
@@ -58,7 +62,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """public method to_dictionary"""
-        return {"x": self.x, "y": self.y, "id": self.id, "height": self.height, "width": self.width}
+        return {"x": self.x, "y": self.y, "id": self.id, 
+                "height": self.height, "width": self.width}
 
     @property
     def width(self):
