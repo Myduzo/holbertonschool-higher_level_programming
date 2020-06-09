@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """this file is created to test rectangle.py file"""
 import unittest
-from models.base import Base
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class TestRectangle(unittest.TestCase):

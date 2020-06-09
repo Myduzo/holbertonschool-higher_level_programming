@@ -14,8 +14,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """method str"""
-        return "[Square] ({}) {}/{} - {}\
-            ".format(self.id, self.x, self.y, self.size)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
 
     def update(self, *args, **kwargs):
         """public method update"""
@@ -37,8 +36,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """public method to_dictonary"""
-        return {"id": self.id, "x": self.x, "size\
-            ": self.size, "y": self.y}
+        return {"id": self.id, "x": self.x, "size": self.size, "y": self.y}
 
     @property
     def size(self):
