@@ -58,4 +58,5 @@ class Base:
         if not cls:
             return []
         with open("{}.json".format(cls.__name__), "r") as f:
-            f.read()
+            conv = cls.from_json_string(f.read())
+        return [cls.create(**data) for data in conv]
