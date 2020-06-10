@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Base class"""
 import json
+import csv
+import turtle
 
 
 class Base:
@@ -62,3 +64,38 @@ class Base:
         except Exception:
             return []
         return [cls.create(**data) for data in conv]
+
+    """@classmethod
+    def save_to_file_csv(cls, list_objs):
+        """"""
+        with open("{}.csv".format(cls.__name__), "w", newline="") as f:
+            csv.write(def draw(list_rectangles, list_squares):)
+"""
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """opens a window and draws all the Rectangles and Squares"""
+        x = turtle.Turtle()
+        s = turtle.Screen()
+        x.screen.bgpic("/home/myduzo/Downloads/cinemagraph-gif-tutorial-from-video-photoshop-premiere-river.gif")
+        x.shape("turtle")
+        x.pencolor("black")
+        x.pensize(2)
+        x.fillcolor("#ff5733")
+        for i in list_rectangles:
+            x.begin_fill()
+            x.forward(i.width)
+            x.onclick(x.left(90))
+            x.forward(i.height)
+            x.left(90)
+            x.forward(i.width)
+            x.left(90)
+            x.forward(i.height)
+            x.end_fill()
+        x.fillcolor("#ffe400")
+        for i in list_squares:
+            x.begin_fill()
+            for j in range(4):
+                x.forward(i.size)
+                x.left(90)
+            x.end_fill()
+
