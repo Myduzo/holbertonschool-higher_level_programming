@@ -52,11 +52,13 @@ class Base:
             dummy = cls(5, 2)
         dummy.update(**dictionary)
         return dummy
-
+    
     @classmethod
     def load_from_file(cls):
-        if not cls:
+        """returns a list of instance"""
+        try:
+            with open("{}.json".format(cls.__name__), "r") as f:
+                conv = cls.from_json_string(f.read())
+        except Exception:
             return []
-        with open("{}.json".format(cls.__name__), "r") as f:
-            conv = cls.from_json_string(f.read())
         return [cls.create(**data) for data in conv]
