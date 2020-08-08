@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Filter States"""
+
+
 from sys import argv
 import MySQLdb
 

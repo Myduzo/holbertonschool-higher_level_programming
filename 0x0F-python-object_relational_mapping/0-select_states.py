@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Select States"""
+
+
 from sys import argv
 import MySQLdb
 
