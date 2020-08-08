@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Filter States"""
+"""My Filter States"""
 
 
 from sys import argv
@@ -14,11 +14,11 @@ if __name__ == "__main__":
         port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name = '{}' \
+        ORDER BY id".format(argv[4]))
     states = cur.fetchall()
     for state in states:
         if argv[4] == state[1]:
             print(state)
-
     cur.close()
     db.close()
