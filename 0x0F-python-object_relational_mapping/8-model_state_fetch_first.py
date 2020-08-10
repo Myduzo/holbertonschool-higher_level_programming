@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Model state fetch all"""
+"""Model state fetch first"""
 
 
 from sys import argv
@@ -16,7 +16,10 @@ if __name__ == "__main__":
     Session.configure(bind=engine)
     session = Session()
 
-    for state in session.query(State):
+    state = session.query(State).first()
+    if state is not None:
         print("{}: {}".format(state.id, state.name))
+    else:
+        print("Nothing")
 
     session.close()
