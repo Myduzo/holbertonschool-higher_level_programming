@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Model state filter %a%"""
+"""Model state my get"""
 
 
 from sys import argv
@@ -16,8 +16,10 @@ if __name__ == "__main__":
     Session.configure(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name.like('%a%')).all()
-    for my_state in state:
-        print("{}: {}".format(my_state.id, my_state.name))
+    state = session.query(State).filter(State.name==argv[4]).one()
+    if state is not None:
+        print(state.id)
+    else:
+        print("Not found")
 
     session.close()
