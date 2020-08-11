@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Model state my get"""
+"""Model state insert"""
 
 
 from sys import argv
