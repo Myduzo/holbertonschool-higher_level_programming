@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Model state update id"""
+"""Model state delete a"""
 
 
 from sys import argv
