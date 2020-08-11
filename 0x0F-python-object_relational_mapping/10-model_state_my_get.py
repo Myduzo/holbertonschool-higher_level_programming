@@ -16,7 +16,7 @@ if __name__ == "__main__":
     Session.configure(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name==argv[4]).one()
+    state = session.query(State).filter(State.name == argv[4]).one()
     if state is not None:
         print(state.id)
     else:
