@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that fetches https://intranet.hbtn.io/status"""
+"""script that displays the value of the variable X-Request-Id in the response header"""
 
 import requests
 import sys
