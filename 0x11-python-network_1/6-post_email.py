@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that isplays the body of the response."""
+"""script that displays the body of the response."""
 
 import requests
 import sys
