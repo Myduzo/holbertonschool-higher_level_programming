@@ -5,5 +5,5 @@ exports.logMe = function (item) {
   } else {
     exports.logMe.count += 1;
   }
-  console.log(exports.logMe.count + ':' + item);
+  console.log(exports.logMe.count + ': ' + item);
 };
