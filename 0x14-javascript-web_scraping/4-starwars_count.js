@@ -6,6 +6,10 @@ request.get(url, function (err, res, body) {
   if (err) {
     console.error(err);
   } else {
-    console.log(films.length);
+    let count = 0;
+    for (let i = 0; i < films.length; i++) {
+      count++;
+    }
+    console.log(count);
   }
 });
