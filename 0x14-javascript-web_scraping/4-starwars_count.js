@@ -7,13 +7,12 @@ request.get(url, function (err, res, body) {
   const films = JSON.parse(body).results;
   if (err) {
     console.error(err);
-  } else {
-    let count = 0;
-    for (let i = 0; i < films.length; i++) {
-      if (films[i].characters.includes(purl)) {
-        count++;
-      }
-    }
-    console.log(count);
   }
+  let count = 0;
+  for (let i = 0; i < films.length; i++) {
+    if (films[i].characters.includes(purl)) {
+      count++;
+    }
+  }
+  console.log(count);
 });
